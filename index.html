@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Redirecting...</title>
+
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="faqih.png" />
+    <link rel="apple-touch-icon" href="faqih.png" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Splash loading minimal -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: white;
+        font-family: sans-serif;
+      }
+      #loading {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loading"></div>
+
+    <script>
+    
+      window.addEventListener("load", () => {
+        const loading = document.getElementById("loading");
+        if (loading) loading.style.display = "none";
+      });
+    </script>
+
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then(() => console.log("✅ Service Worker registered"))
+          .catch((err) =>
+            console.error("❌ Service Worker registration failed:", err)
+          );
+      }
+    </script>
+
+
+    <script type="module" src="/message.js"></script>
+
+    <!-- Routing redirect -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const mode = params.get("mode");
+      const oobCode = params.get("oobCode");
+
+      if (mode === "verifyEmail" && oobCode) {
+        window.location.href = `/verivikasi.html?mode=${mode}&oobCode=${oobCode}`;
+      } else {
+        window.location.href = "intro.html";
+      }
+    </script>
+  </body>
+</html>

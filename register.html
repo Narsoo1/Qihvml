@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - Qih</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="register.css">
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+
+  <main class="flex-grow flex flex-col items-center pt-16">
+    <div class="bg-gray-800 px-6 py-8 rounded-xl w-[90%] max-w-sm">
+      <h2 class="text-2xl font-bold mb-6 text-center">orang pusing</h2>
+
+      <input id="registerEmail" type="email" placeholder="Email"
+        class="w-full p-3 mb-4 rounded bg-gray-700 border-none" />
+
+      <input id="registerPassword" type="password" placeholder="Password"
+        class="w-full p-3 mb-4 rounded bg-gray-700 border-none" />
+
+      <button id="registerBtn" class="bg-blue-500 hover:bg-blue-600 w-full py-2 rounded">Daftar</button>
+      <button onclick="window.location.href='login.html'"
+        class="mt-4 text-sm text-blue-400 hover:underline block w-full text-center">area login!</button>
+    </div>
+  </main>
+  <div id="toastContainer"></div>
+<script type="module" src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QIH Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">QIH</div>
+    <button id="menuBtn" class="menu-btn"><i class="fas fa-bars"></i></button>
+  </header>
+  
+  <!-- Chat History -->
+  <div id="chatHistory" class="chat-list">
+    <div style="color:gray">sabar!</div>
+  </div>
+  
+  <!-- Menu PopUp -->
+  <div id="menuPopup" class="popup">
+    <div class="popup-header">
+      <div class="popup-title">menu</div>
+      <button id="closePopup" class="menu-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="popup-body">
+      <button id="searchUserBtn">Cari Username</button>
+      <button id="archiveBtn">Arsip Chat</button>
+      <button id="themeToggleBtn">oreo</button>
+      <button id="logoutBtn">Logout</button>
+      <button id="openBrowserBtn">Buka Browser</button>
+    </div>
+    <div class="popup-footer">
+      <a href="https://instagram.com/qih_stark" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/faqihhm_" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  
+  <!-- Popup Pencarian Username -->
+  <div id="searchPopup" class="search-popup">
+    <div class="search-header">
+      <div class="popup-title">Username</div>
+      <button id="closeSearchPopup" class="menu-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="search-input-wrapper">
+      <input id="searchInput" type="text" placeholder="Cari username..." />
+      <button id="searchInputBtn"><i class="fas fa-search"></i></button>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+  
+  <!-- Popup Konfirmasi Hapus -->
+  <div id="customConfirm">
+    <div class="confirm-box">
+      <div id="confirmMessage">gue voter 05🤡</div>
+      <div class="confirm-buttons">
+        <button id="confirmDelete" style="background-color:#ef4444">Hapus</button>
+        <button id="confirmArchive" style="background-color:#facc15; color:black;">Arsipkan</button>
+        <button id="confirmCancel">Batal</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Popup Arsip -->
+  <div id="archivePopup" class="search-popup">
+    <div class="search-header">
+      <div class="popup-title">Arsip Chat</div>
+      <button id="closeArchivePopup" class="menu-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="archiveContent" style="padding: 16px;">
+      <div style="color:gray">sabar!</div>
+    </div>
+  </div>
+  
+  <!-- Popup Konfirmasi Arsip -->
+  <div id="archiveConfirm" class="confirm-box-wrapper">
+    <div class="confirm-box">
+      <div id="archiveConfirmMessage">gue voter 05🦔</div>
+      <div class="confirm-buttons">
+        <button id="btnDeleteArchive" style="background-color: #ef4444;">Hapus</button>
+        <button id="btnUnarchive" style="background-color: #facc15; color: black;">Keluarkan</button>
+        <button id="btnCancelArchive">Batal</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Popup Browser -->
+  <div id="browserPopup" class="popup">
+    <div class="popup-header">
+      <div class="popup-title">Mini Browser</div>
+      <button id="closeBrowserPopup" class="menu-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="popup-body">
+      <div class="search-input-wrapper">
+        <input id="searchBar" type="text" placeholder="Cari sesuatu..." />
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      <iframe id="resultFrame" class="browser-frame"></iframe>
+    </div>
+  </div>
+  
+  <!-- JS -->
+  <script type="module" src="home.js"></script>
+</body>
+
+</html>

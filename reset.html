@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reset Password - Qih</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="reset.css">
+ </head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+  <main class="flex-grow flex justify-center items-start pt-20">
+    <div class="w-full max-w-xs">
+      <form id="resetForm" class="bg-gray-800 rounded px-8 pt-6 pb-8">
+        <h2 class="text-center text-2xl font-bold mb-6">Reset Password</h2>
+
+        <div class="mb-4">
+          <input
+            id="resetEmail"
+            type="email"
+            placeholder="Masukkan email anda"
+            class="rounded w-full py-2 px-3 bg-gray-700 text-white outline-none focus:ring-0"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+        >
+          Kirim Link Reset
+        </button>
+
+        <div class="text-center mt-4">
+          <button
+            type="button"
+            onclick="window.location.href='login.html'"
+            class="text-sm text-blue-400 hover:underline"
+          >
+            Batal / Kembali
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+<div id="toastContainer"></div>
+  <script type="module" src="reset.js"></script>
+</body>
+</html>
